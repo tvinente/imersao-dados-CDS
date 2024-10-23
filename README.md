@@ -3,3 +3,5 @@
 **Aula 01:** Coleta de Dados com SQL
 
 **Aula 02:** Tratamento de Dados com Python e Pandas
+
+**Aula 3:** Treinamento de Algoritmos de Machine Learning
