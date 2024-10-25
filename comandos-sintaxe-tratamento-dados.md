@@ -1,9 +1,13 @@
 ## Comandos e sintaxe importantes para o tratamento de dados
 
-### **Comando: Importar a biblioteca Pandas**
-import pandas as pd
+### **Comando: Importar a biblioteca Pandas** - 
+- Para manipulação e análise de dados.
+  
+import pandas as pd 
 
 ### **Comando: Import a biblioteca SQlite**
+- Para conexão e manipulação de bancos de dados SQLite
+
 import sqlite3 as sl3
 
 ### **Usar o comando "connect" da biblioteca sqlite3 para conectar ao banco de dados e guarde a conexão dentro da variável "conn"**
@@ -12,11 +16,16 @@ conn = sqlite3.connect( "database.db" )
 conn = sl3.connect( "database.db" )
 
 ### **Coletando os dados**
+- Seleciona todas as colunas da tabela flight_activity e realiza um join à esquerda com a tabela flight_loyalty_history com base na coluna loyalty_number.
+  
 consulta_atividade = """
 
-  SELECT *
-  FROM
-    flight_activity fa     LEFT JOIN flight_loyalty_history flh ON (fa.loyalty_number = flh.loyalty_number )
+SELECT *
+FROM flight_activity fa
+
+LEFT JOIN flight_loyalty_history flh
+
+ON (fa.loyalty_number = flh.loyalty_number)
 
 """
 
